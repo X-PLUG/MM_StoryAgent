@@ -1,0 +1,86 @@
+story_dir: &story_dir generated_stories/20240816_1218
+audio_sample_rate: &audio_sample_rate 16000
+
+story_writer:
+    tool: qa_outline_story_writer
+    cfg:
+        max_conv_turns: 3
+        num_outline: 4
+        temperature: 0.5
+    params:
+        story_topic: "Time Management: A child learning how to manage their time effectively."
+        main_role: "(no main role specified)"
+        scene: "(no scene specified)"
+
+sound_generation:
+    tool: audioldm2_t2a
+    cfg:
+        num_turns: 3
+        device: cuda
+        sample_rate: *audio_sample_rate
+    params:
+        guidance_scale: 3.5
+        seed: 0
+        ddim_steps: 200
+        n_candidate_per_text: 3
+
+
+speech_generation:
+    tool: cosyvoice_tts
+    cfg:
+        sample_rate: *audio_sample_rate
+    params:
+        voice: longyuan
+
+
+image_generation:
+    tool: story_diffusion_t2i
+    cfg:
+        num_turns: 3
+        model_name: stabilityai/stable-diffusion-xl-base-1.0
+        id_length: 2
+        height: &image_height 512
+        width: &image_width 1024
+    params:
+        seed: 112536
+        guidance_scale: 10.0
+        style_name: "Storybook" # ['(No style)', 'Japanese Anime', 'Digital/Oil Painting', 'Pixar/Disney Character', 
+                                #  'Photographic', 'Comic book', 'Line art', 'Black and White Film Noir', 'Isometric Rooms']
+
+music_generation:
+    tool: musicgen_t2m
+    cfg:
+        llm_type: qwen
+        num_turns: 3
+        device: cuda
+    params:
+        duration: 30.0
+
+video_compose:
+    tool: slideshow_video_compose
+    cfg:
+        {}
+    params:
+        height: *image_height
+        width: *image_width
+        story_dir: *story_dir
+        fps: 8
+        audio_sample_rate: *audio_sample_rate
+        audio_codec: mp3
+        caption:
+            font: resources/font/msyh.ttf
+            # bg_color: LightGrey
+            fontsize: 32
+            color: white
+            # stroke_color: white
+            # stroke_width: 0.5
+            max_length: 50
+        slideshow_effect:
+            bg_speech_ratio: 0.6
+            sound_volume: 0.6
+            music_volume: 0.5
+            fade_duration: 0.8
+            slide_duration: 0.4
+            zoom_speed: 0.5
+            move_ratio: 0.9
+    
