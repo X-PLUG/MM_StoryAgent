@@ -1,0 +1,38 @@
+[
+    {
+        "name": "interest",
+        "criteria_description": "Interest: How engaging and appealing is the story to children?",
+        "score1_description": "Not interesting; the story is boring and fails to capture children's attention.",
+        "score2_description": "Somewhat interesting; the overall plot is rather dull and has limited appeal to children.",
+        "score3_description": "Moderately interesting; the story includes some engaging elements, but is not exciting or captivating enough.",
+        "score4_description": "Very interesting; most of the plot is filled with engaging content that effectively captures children's attention.",
+        "score5_description": "Extremely interesting; the plot is spectacular, full of creativity and engaging elements that greatly attract children's interest."
+    },
+    {
+        "name": "coherence",
+        "criteria_description": "Coherence: Is the storyline fluent, tight, and logically clear, allowing children to smoothly understand the development and conclusion of the story?",
+        "score1_description": "Very disjointed; the storyline is incoherent and contradictory, making it hard for children to follow its development.",
+        "score2_description": "There are some gaps; the plot is somewhat incoherent or lacks logic, though the story can still be understood with some effort.",
+        "score3_description": "Relatively coherent; the story is generally logical and coherent but has some small lapses or awkward parts.",
+        "score4_description": "Very coherent; the storyline is tight and smooth, logical and clear, allowing most children to understand and follow the story's development easily.",
+        "score5_description": "Extremely coherent; the plot is tightly woven and naturally flows, logically clear, making it easy and engaging for children to understand."
+    },
+    {
+        "name": "education",
+        "criteria_description": "Educational value: How significant is the educational content and positive impact on children's growth conveyed by the story?",
+        "score1_description": "Lacks educational value; the story does not convey any meaningful educational content.",
+        "score2_description": "Somewhat educational; the content is superficial, with limited impact on children's growth.",
+        "score3_description": "Moderately educational; the story conveys some valuable educational content, but is not comprehensive or profound enough.",
+        "score4_description": "Very educational; most of the content conveys rich educational content that can positively influence children's growth.",
+        "score5_description": "Extremely educational; the entire text is filled with profound and comprehensive educational content that has a far-reaching and positive impact on children's growth.。"
+    },
+    {
+        "name": "warmth",
+        "criteria_description": "Warmth: Does the story convey enough warmth and emotion?",
+        "score1_description": "Lacks warmth; the story fails to convey any warmth or emotion.",
+        "score2_description": "Little warmth; the story conveys some warmth but lacks depth and lasting feelings.",
+        "score3_description": "Moderate warmth; some parts of the story convey warmth and emotion well, but they are not lasting.",
+        "score4_description": "Very warm; most of the content conveys warmth and emotion that can be felt continuously.",
+        "score5_description": "Extremely warm; the entire story is permeated with warmth and emotion, profoundly touching the reader's heart."
+    }
+]
