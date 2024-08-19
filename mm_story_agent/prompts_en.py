@@ -1,4 +1,3 @@
-
 instruction = """
 1. Conciseness: Describe the plot of each chapter in a simple and straightforward manner, using a storybook tone without excessive details.
 2. Narrative Style: There is no need for dialogue or interaction with the reader.

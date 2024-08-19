@@ -1,5 +1,4 @@
-story_dir: &story_dir generated_stories/20240816_1218
-audio_sample_rate: &audio_sample_rate 16000
+story_dir: &story_dir generated_stories/example
 
 story_writer:
     tool: qa_outline_story_writer
@@ -17,7 +16,7 @@ sound_generation:
     cfg:
         num_turns: 3
         device: cuda
-        sample_rate: *audio_sample_rate
+        sample_rate: &sample_rate 16000
     params:
         guidance_scale: 3.5
         seed: 0
@@ -28,7 +27,7 @@ sound_generation:
 speech_generation:
     tool: cosyvoice_tts
     cfg:
-        sample_rate: *audio_sample_rate
+        sample_rate: *sample_rate
     params:
         voice: longyuan
 
@@ -65,7 +64,7 @@ video_compose:
         width: *image_width
         story_dir: *story_dir
         fps: 8
-        audio_sample_rate: *audio_sample_rate
+        audio_sample_rate: *sample_rate
         audio_codec: mp3
         caption:
             font: resources/font/msyh.ttf

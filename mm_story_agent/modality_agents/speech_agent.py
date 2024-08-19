@@ -10,6 +10,7 @@ import nls
 from mm_story_agent.base import register_tool
 
 
+# Due to the trouble regarding environment, we use dashscope to deploy and call the API for CosyVoice.
 class CosyVoiceSynthesizer:
 
     def __init__(self) -> None:
