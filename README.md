@@ -7,9 +7,10 @@ MM-StoryAgent is a multi-agent framework that employs LLMs and diverse expert to
 * MM-StoryAgent writes **high-quality** stories based on the input story setting, in a multi-agent, multi-stage pipeline.
 * Agents of all modalities (image, speech, sound, music) generated corresponding assets are composed to an **immersive** storytelling video.
 
-<div style="text-align: center;">
-    <img src="./assets/framework.png" alt="Framework" style="width: 60%;">
+<div align="center">
+    <img src="./assets/framework.png" alt="Framework" style="width: 80%;">
 </div>
+
 
 Besides, we provide a story topic list and story evaluation criteria for further story writing evaluation.
 
