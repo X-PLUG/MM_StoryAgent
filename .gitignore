@@ -162,12 +162,8 @@ cython_debug/
 #.idea/
 
 
-# audio / video / image files
-**/*.mp4
-**/*.png
-**/*.wav
-resources
 
+resources
 # generated stories
 generated_stories
 
